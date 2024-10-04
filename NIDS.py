@@ -6,9 +6,6 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 from sklearn.utils.class_weight import compute_class_weight
 from sklearn.inspection import permutation_importance
 
-import seaborn as sns
-import matplotlib.pyplot as plt
-
 # Load the dataset
 df_train = pd.read_csv('datasets/UNSW_NB15_training-set.csv', header=0)
 df_test = pd.read_csv('datasets/UNSW_NB15_testing-set.csv', header=0)
