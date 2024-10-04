@@ -21,14 +21,6 @@ df_test = df_test.drop(columns=['id'])
 df_train = pd.get_dummies(df_train, columns=['proto', 'service', 'state'])
 df_test = pd.get_dummies(df_test, columns=['proto', 'service', 'state'])
 
-
-corr_matrix = df_train.corr()
-plt.figure(figsize=(20, 20))
-sns.heatmap(corr_matrix, annot=True, fmt=".2f", cmap='coolwarm', square=True)
-plt.title("Correlation Matrix")
-plt.show()
-
-
 # Align columns between train and test datasets
 X_train, X_test = df_train.align(df_test, join='left', axis=1, fill_value=0)
 
