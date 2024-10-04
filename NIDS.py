@@ -29,10 +29,6 @@ y_test = df_test['label']
 X_train = X_train.drop(columns=['label', 'attack_cat'])
 X_test = X_test.drop(columns=['label', 'attack_cat'])
 
-# Drop state_CON
-X_train = X_train.drop(columns=['state_CON'])
-
-
 # Handle imbalanced data by applying class weights
 # Ensure that classes are a numpy array, and calculate class weights
 classes = np.array([0, 1])  # Define classes (0 for normal, 1 for attack)
